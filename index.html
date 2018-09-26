@@ -11,7 +11,7 @@
 /*Slideshow background of index page. Created with the help of https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
     
 .slideshow {
-     position: float;
+     float: none;
      list-style-type: none;
      width: 100%;
      height: 0;
@@ -32,7 +32,7 @@
      background-position: 50% 50%;
      background-repeat: none;
      opacity: 0;
-     z-index: 0;
+     z-index: -1;
      animation: imageAnimation 24s linear infinite 0s;
 }
  .slideshow li:nth-child(1) span {
@@ -78,16 +78,16 @@
 
     <body>
         <div class="navbar">
-            <a class="active" href="./Index.html"><b>HOME</b></a>
-            <a href="#about">ABOUT</a>
+            <a class="active" href="./index.html">HOME</a>
+            <a href="./about.html">ABOUT</a>
             <div class="dropdown">
-                <div class="drop">PROJECTS</div>
+                <div class="drop">PROJECTS &#x25BC;</div>
                     <div class="drop-content">
-                        <a href="#Athlone">Athlone Garda Station</a>
-                        <a href="#Leinster House">Leinster House</a>
+                        <a href="./athlone.html">Athlone Garda Station</a>
+                        <a href="./leinsterhouse.html">Leinster House</a>
                     </div>
             </div>
-            <a href="#contact">CONTACT</a>
+            <a href="./contact.html">CONTACT</a>
         </div>
 
         <ul class="slideshow">
