@@ -1,14 +1,57 @@
  body {
-     margin: 0;
+     margin: 0px;
      font-family: Helvetica, Arial;
+}
+
+
+h1 {
+    display: inline;
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 16px;
+    width: 100%;
+    text-align: left;
+    color: lightgray;
+    font-size: 30px;
+}
+
+table {
+    table-layout: auto;
+    border-collapse: collapse;
+    border-style: hidden;
+    padding: 14px;
+    padding-right: 14px;
+    margin: 8px 16px 8px 0px;
+    color: dimgray;
+    width: 100%;
+}
+
+td {
+    border-right: 1px dotted dimgrey;
+}
+
+th, td {
+    color: dimgray;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px;
+    vertical-align: text-top;
+}
+
+th {
+  border-bottom: 1px dotted dimgrey;
 }
 
 /*below css for navigation bar was created using w3 schools - https://www.w3schools.com/howto/howto_js_topnav.asp and altered to make the code responsive and stack when less than 400px. Also altered to allow a drop down within the navigation bar with w3schools: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp. */
 /*Navigation bar styling*/
 
  .navbar {
-     overflow: hidden;
-     background-color: #FF8C00;
+    overflow: hidden;
+    background-color: #FF8C00;
+    margin: 0px;
+    padding: 0;
 }
  .navbar a {
      float: left;
@@ -19,6 +62,7 @@
      text-decoration: none;
      font-size: 16px;
      background-color: darkorange;
+     margin: 0;
 }
  .navbar a.active {
      color: white;
@@ -60,12 +104,103 @@
      display: inline-block;
 }
  @media screen and (max-width: 400px) {
-     .navbar a, .dropdown, .drop, .drop-content {
+     .navbar a, .dropdown, .drop, .drop-content, .h1 {
          position: relative;
          display: block;
          width: 100%;
          text-align: center;
          float: none;
+         margin: 0;
     }
 }
- 
+
+/*Resposive image grid made with the help of http://www.menucool.com/ui/responsive-image-grid-with-hover-effect#*/
+
+.gallery {
+    margin: 10px;
+    margin-top: 30px;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+.gallery li {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.gallery li:hover .image {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: lightgrey no-repeat center 40%;
+    background-size: 25%;
+    opacity:0;
+    transition: .8s ease;
+}
+
+.gallery li:hover .overlay {
+    opacity: 0.9;
+}
+
+.overlay-text {
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-family: helvetica, arial;
+    top: 40%;
+    color:dimgray;
+    opacity:0;
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+
+.gallery li:hover .overlay-text {
+    transform: translateY(0px);
+    opacity: 0.9;
+}
+
+@media (max-width: 9000px) {
+    .gallery li {
+        width:33%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gallery li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery li {
+        width:100%;
+    }
+}
