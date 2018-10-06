@@ -2,81 +2,17 @@
 <html lang="en">
     
 <head>
-    <meta charset="utf-8" name="assignment 1" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"> 
+    <meta name="assignment 1" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Assignment 1</title>
-</head>
+
 
 <style>
-/*Slideshow background of index page. Created with the help of https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
-Added inline as does not work if added to stylesheet  
-  */
-    
-.slideshow {
-     float: none;
-     list-style-type: none;
-     width: 100%;
-     height: 0;
-     top: 0px;
-     left: 0px;
-     right: 0px;
-     z-index: 0;
-}
- .slideshow li span {
-     width: 100%;
-     height: 100%;
-     list-style-type: none;
-     position: absolute;
-     top: 0px;
-     left: 0px;
-     color: transparent;
-     background-size: cover;
-     background-position: 50% 50%;
-     background-repeat: none;
-     opacity: 0;
-     z-index: -1;
-     animation: imageAnimation 24s linear infinite 0s;
-}
- .slideshow li:nth-child(1) span {
-     background-image: url(../images/athone/athlone-external-photoshop.jpg);
-}
- .slideshow li:nth-child(2) span {
-     background-image: url(../images/athone/athlone-sketchup.jpg);
-     animation-delay: 6s;
-}
- .slideshow li:nth-child(3) span {
-     background-image: url(../images/leinster-house/leinster-house-ramp.jpg);
-     animation-delay: 12s;
-}
- .slideshow li:nth-child(4) span {
-     background-image: url(../images/leinster-house/leinster-house-long-section.jpg);
-     animation-delay: 18s;
-}
- @keyframes imageAnimation {
-     0% {
-         opacity: 0;
-         animation-timing-function: ease-in;
-    }
-     6% {
-         opacity: 1;
-    }
-     17% {
-         opacity: 1; 
-    }
-     30% {
-         opacity: 0;
-         animation-timing-function: ease-out;
-    }
-     100% {
-         opacity: 0; 
-    }
-}
- .no-cssanimations .slideshow li span{
-     opacity: 1;
-}
-
+/
     
 </style>
+</head>
 
     <body>
         <div class="navbar">
