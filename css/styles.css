@@ -130,7 +130,7 @@ th {
      display: inline-block;
 }
  @media screen and (max-width: 400px) {
-     .navbar a, .dropdown, .drop, .drop-content, .h1 {
+     .navbar a, .dropdown, .drop, .drop-content, h1 {
          position: relative;
          display: block;
          width: 100%;
@@ -346,27 +346,36 @@ th {
 
 .container1 {
     background-color: darkorange;
-    position: fixed;
+    position: absolute;
     margin: 16px;
     border-radius: 3px;
     padding-bottom: 16px;
     z-index: -1;
-    flex-wrap: wrap;
 }
 
+.slideshow2 {
+     float: left;
+     list-style-type: none;
+     width: 50%;
+     height: 0;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     z-index: 0;
+}
 
 .slideshow2 ul {
      list-style-type: none;
 }
 
  .slideshow2 li span {
-     float: right;
      width: 45%;
-     height: 94%;
+     height: 92%;
      top: 16px;
      right: 16px;
      list-style-type: none;
      position: absolute;
+     background-size: cover;
      background-position: 50% 50%;
      background-repeat: no-repeat;
      opacity: 0;
@@ -430,11 +439,20 @@ th {
 }
 
 .about h3 {
-    top: 0;
+    top: -15px;
     padding: 0;
-    margin: 16px;
+    margin: 15px;
 }
 
 .about .link:hover {
     color: lightgray;
+}
+
+@media screen and (max-width: 400px) {
+     .about, .slideshow2 {
+         position: relative;
+         display: inline;
+         width: 100%;
+         margin: 0;
+    }
 }
